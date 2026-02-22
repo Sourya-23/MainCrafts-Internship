@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
+<body class="inner-page">
 
 <header>
   <div class="logo">MainCrafts</div>
@@ -16,6 +16,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
     </ul>
   </nav>
 </header>
@@ -27,7 +28,7 @@
   <p><strong>Website:</strong> www.maincrafts.com</p>
   <!-- <p><strong>Location:</strong> Remote / India</p> -->
   </div>
-  <form name="contactForm" onsubmit="return validateForm()" class="contact-form">
+  <form id="contactForm" onsubmit="return validateForm()" class="contact-form">
 
   <div class="form-group">
     <label for="name">Name</label>
