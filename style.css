@@ -414,3 +414,130 @@ form button:hover {
   color: #38bdf8;
   margin-bottom: 10px;
 }
+
+.dashboard-section {
+  text-align: center;
+}
+
+.dashboard-container {
+  width: min(90vw, 700px);
+  margin-top: 30px;
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.task-input button {
+  padding: 12px 20px;
+  border: none;
+  background: #38bdf8;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+#taskList button {
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+#filterBox {
+  width: 15%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+/* ===== DASHBOARD ANIMATIONS ===== */
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutShrink {
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Task entry animation */
+#taskList li {
+  animation: fadeSlideIn 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Completed task animation */
+.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+#taskList button {
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+#taskList button:hover {
+  transform: scale(1.1);
+}
+
+/* Add button hover */
+.task-input button:hover {
+  transform: translateY(-1px);
+}
+
+/* Delete animation class */
+.removing {
+  animation: fadeOutShrink 0.25s forwards;
+}
+
+.task-text {
+  transition: all 0.3s ease;
+}
